@@ -6,20 +6,27 @@ async function sendMessage() {
   appendMessage("user", message);
   input.value = "";
 
+  // Typing simulation
   appendMessage("bot", "Typing...");
 
-  const response = await fetch("/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message })
-  });
+  try {
+    const response = await fetch("http://localhost:3000/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message })
+    });
 
-  const data = await response.json();
+    const data = await response.json();
 
-  // Remove typing message
-  document.querySelector(".bot-message:last-child").remove();
+    // Remove typing message
+    document.querySelector(".bot-message:last-child").remove();
 
-  appendMessage("bot", data.reply);
+    appendMessage("bot", data.reply);
+  } catch (err) {
+    document.querySelector(".bot-message:last-child").remove();
+    appendMessage("bot", "❌ Error: Could not reach server.");
+    console.error(err);
+  }
 }
 
 function appendMessage(sender, text) {
