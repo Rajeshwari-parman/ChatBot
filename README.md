@@ -40,7 +40,7 @@ Copy code
 npm init -y
 npm install express openai dotenv body-parser
 
-#STEP 4: Add .env file (in root)
+# STEP 4: Add .env file (in root)
 Copy code
 OPENAI_API_KEY=your_openai_api_key_here
 
