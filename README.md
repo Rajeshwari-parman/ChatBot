@@ -83,3 +83,4 @@ Copy code
 # step7: Open index.html in Your Browser
 Now just open your index.html file (you can double click it, or use Live Server if you're in VS Code) and start chatting!
 
+![chatbot](https://github.com/user-attachments/assets/5a6ecb5a-9b84-4c36-8ce4-4b75c3cb4e29)
