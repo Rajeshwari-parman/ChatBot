@@ -20,6 +20,7 @@ Complete, responsive, and interactive AI-based customer service chatbot step-by-
 Install Node.js and npm (https://nodejs.org/)
 
 Signup for an OpenAI API key (https://platform.openai.com/account/api-keys)
+Make payments 5$
 
 # STEP 1: Build a Responsive Chatbot UI
 📁 Folder Structure:
